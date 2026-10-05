@@ -1,0 +1,43 @@
+### GET All Postings
+GET http://localhost:5000/postings
+
+### GET Posting by ID
+GET http://localhost:5000/postings/1
+
+### POST Create Posting
+POST http://localhost:5000/postings
+Content-Type: application/json
+
+{
+  "from": "Рівне",
+  "to": "Луцьк",
+  "content": "подарунок",
+  "deliveryType": 0,
+  "weight": 6,
+  "width": 10,
+  "height": 10,
+  "depth": 10,
+  "value": 100,
+  "price": 1000
+}
+
+### PUT Update Posting
+PUT http://localhost:5000/postings/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "from": "Рівне",
+  "to": "Київ",
+  "content": "оновлена посилка",
+  "deliveryType": 1,
+  "weight": 5,
+  "width": 15,
+  "height": 15,
+  "depth": 15,
+  "value": 200,
+  "price": 300
+}
+
+### DELETE Posting
+DELETE http://localhost:5000/postings/1
